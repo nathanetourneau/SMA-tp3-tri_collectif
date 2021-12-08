@@ -31,7 +31,15 @@ def update_altair_plot(env):
     fig = alt.Chart(data).mark_circle().encode(
         x=alt.X('col', scale=alt.Scale(domain=[0, env.M])),
         y=alt.Y('row', scale=alt.Scale(domain=[0, env.N])),
-        color=alt.Color('category', legend=None)
+        color=alt.Color(
+            'category',
+            legend=alt.Legend(orient='bottom'),
+            scale=alt.Scale(range=['red', 'green', 'blue'])
+        )
+    ).configure_axis(
+        grid=False
+    ).properties(
+        width=600, height=600
     )
     return fig
 

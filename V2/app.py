@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-Main module coding the loop of the multi-agent system. The scenario here is a 
-grid of dimensions NxM, with a number na of objects of class A, nb of objects 
-of class B, n_agents agents, and the purpose of the agents is to walk randomly, 
-and sort the objects with few rules described in Deneubourg, Jean-Louis et al. 
+Main module coding the loop of the multi-agent system. The scenario here is a
+grid of dimensions NxM, with a number na of objects of class A, nb of objects
+of class B, n_agents agents, and the purpose of the agents is to walk randomly,
+and sort the objects with few rules described in Deneubourg, Jean-Louis et al.
 “The dynamics of collective sorting robot-like ants and ant-like robots.”
 
 The main script is embedded in a Streamlit app, with a visualisation made with
@@ -26,30 +26,30 @@ from visualization import update_altair_plot
 st.sidebar.header("General settings")
 
 N = st.sidebar.number_input(
-    label="Number of rows ?", min_value=1, max_value=99999, value=200)
+    label="Number of rows ?", min_value=1, max_value=99999, value=50)
 M = st.sidebar.number_input(
-    label="Number of columns ?", min_value=1, max_value=99999, value=300)
+    label="Number of columns ?", min_value=1, max_value=99999, value=50)
 NA = st.sidebar.number_input(
-    label="Number of objects of class A ?", min_value=1, max_value=99999, value=750)
+    label="Number of objects of class A ?", min_value=1, max_value=99999, value=100)
 NB = st.sidebar.number_input(
-    label="Number of objects of class B ?", min_value=1, max_value=99999, value=750)
+    label="Number of objects of class B ?", min_value=1, max_value=99999, value=100)
 NC = st.sidebar.number_input(
-    label="Number of objects of class C ?", min_value=1, max_value=99999, value=750)
+    label="Number of objects of class C ?", min_value=1, max_value=99999, value=100)
 N_AGENTS = st.sidebar.number_input(
-    label="Number of agents ?", min_value=1, max_value=99999, value=100)
+    label="Number of agents ?", min_value=1, max_value=99999, value=20)
 KPLUS = st.sidebar.slider(label="Value for K+ ?",
                           min_value=0., max_value=1., value=0.1)
 KMINUS = st.sidebar.slider(label="Value for K- ?",
                            min_value=0., max_value=1., value=0.3)
 MEMORY_BUFFER_SIZE = st.sidebar.number_input(
-    label="Size of memory buffer ?", min_value=1, max_value=99999, value=50)
+    label="Size of memory buffer ?", min_value=1, max_value=99999, value=20)
 N_ROUNDS = st.sidebar.number_input(
     label="Number of rounds ?", min_value=1, max_value=1000000000, value=1000000)
 
 RATIO = st.sidebar.slider(label="Value of the temporal decay factor of the pheromones ?",
                           min_value=0., max_value=1., value=0.75)
 SIGNAL_RANGE = st.sidebar.number_input(label="Spatial range of the pheromones ?",
-                                       min_value=1, value=1)
+                                       min_value=1, value=4)
 
 MAX_PATIENCE = st.sidebar.number_input(label="Patience for objects of type C ?",
                                        min_value=1, max_value=100, value=15)
