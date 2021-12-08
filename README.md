@@ -25,5 +25,5 @@ On a N*M grid, there are objects, n_a objets of class A, and n_b objects of clas
 To run the work, one has to type `cd V1` or `cd V2` if one wants to run version 1 or version 2. Once done, one can use the handy streamlit app in `app.py` by running `streamlit run app.py` or just run `python main.py` for a less fancy but nevertheless working visualisation of the objects spread across the rounds.
 
 An online version is accessible at :
-[V1] (https://share.streamlit.io/nathanetourneau/sma-tp3-tri_collectif/V1/app.py)
-[V2] (https://share.streamlit.io/nathanetourneau/sma-tp3-tri_collectif/V2/app.py)
+[V1](https://share.streamlit.io/nathanetourneau/sma-tp3-tri_collectif/V1/app.py)
+[V2](https://share.streamlit.io/nathanetourneau/sma-tp3-tri_collectif/V2/app.py)
